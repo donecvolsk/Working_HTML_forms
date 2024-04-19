@@ -1,20 +1,17 @@
 body {
-    color: #999;  
+    color: #999;
+    text-align: center;
 }
 
-.message {
-    display: flex;
-    gap: 30px;
+.form {
+    display: block;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.message-true {
-    color: green;
-    font-size: large;
-}
-
-.message-fols {
-    color: red;
-    font-size: large;
+.hidden {
+    display: none;
 }
 
 
