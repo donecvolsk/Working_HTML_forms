@@ -32,15 +32,17 @@ const popoverСontentObj = {
 
 container.addEventListener("click", (event) => {
     event.preventDefault();
-    const  trg = event.target;
-    const formTrg = trg.closest(".form");
+    const  { target }  = event;
+    const formTrg = target.closest(".form");
 
     console.log(formTrg);
-    console.log(popoverСontentObj[formTrg.name]);
+    //console.log(popoverСontentObj[formTrg.name]);
 
     const popoverDiv = document.createElement("div");
+    popoverDiv.classList.add("popover");
     popoverDiv.textContent = "Hello";
-    document.body.appendChild(popoverDiv);
+    formTrg.before(popoverDiv);
+   
 
     /*if(formTrg) {
         let popover = formTrg.querySelector(".popover");
