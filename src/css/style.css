@@ -8,8 +8,8 @@ body {
 }
 
 .container {
-    min-height: 50vh;
-    margin: 10px;
+    width: 185px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -17,13 +17,17 @@ body {
   }
 
 .form {
+    margin-bottom: 20px;
     display: block;
-     
 }
 
+.form:hover {
+    cursor: pointer;
+  }
+
 .popover {
-    width: 100px;
-    border: 1px solid grey;
+    width: 300px;
+    border: 1px solid black;
     border-radius: 10px;
     background-color: rgb(223, 36, 36);
     position: relative; 
@@ -36,12 +40,24 @@ body {
     width: 10px;
     position: absolute;
     background-color:rgb(223, 36, 36);
-    border: 1px solid grey;
+    border: 1px solid black;
     border-left-style: none;
     border-top-style: none;
     left: 50%;
     top: 100%;
     transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.popoverTitle {
+  background-color: azure;
+  border-bottom: 1px solid bisque;
+  color: black;
+  font-size: large;
+}
+
+.popoverText {
+  font-size: medium;
+  color: antiquewhite;
 }
 
 .hidden {

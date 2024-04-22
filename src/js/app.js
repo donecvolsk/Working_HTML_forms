@@ -1,6 +1,5 @@
 
-
-const container = document.querySelector(".container"); //контейнер с формами
+import Popover from "./popover/popover";
 
 //Объект с содержимым для поповеров
 const popoverСontentObj = {
@@ -11,7 +10,7 @@ const popoverСontentObj = {
 
     "range": {
         title: "range",
-        content: "Этот тип применяется вывода ползунка"
+        content: "Этот тип применяется для вывода ползунка"
     },
 
     "color": {
@@ -21,7 +20,7 @@ const popoverСontentObj = {
 
     "radio": {
         title: "radio",
-        content: "Этот тип применяется для вывода палитры цвета"
+        content: "Этот тип применяется для вывода перключателя"
     },
 
     "button": {
@@ -30,30 +29,5 @@ const popoverСontentObj = {
     }
 }
 
-container.addEventListener("click", (event) => {
-    event.preventDefault();
-    const  { target }  = event;
-    const formTrg = target.closest(".form");
-
-    console.log(formTrg);
-    //console.log(popoverСontentObj[formTrg.name]);
-
-    const popoverDiv = document.createElement("div");
-    popoverDiv.classList.add("popover");
-    popoverDiv.textContent = "Hello";
-    formTrg.before(popoverDiv);
-   
-
-    /*if(formTrg) {
-        let popover = formTrg.querySelector(".popover");
-         
-        if(popover) {
-            popover.clasList.toggle("hidden");
-        } else {
-            
-        }
-    }*/
-})
-
-//console.log(container);
-//console.log(popoverСontentObj.button.content);
+//запуск функции формирования поповера
+Popover(popoverСontentObj);
