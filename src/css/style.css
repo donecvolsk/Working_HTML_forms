@@ -1,5 +1,6 @@
 html,
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,6 +33,7 @@ body {
     background-color: rgb(223, 36, 36);
     position: relative; 
     z-index: 100;
+    cursor: pointer;
 }
 
 .popover::after {
