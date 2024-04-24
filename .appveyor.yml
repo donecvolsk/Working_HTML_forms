@@ -1,15 +1,15 @@
-image: Ubuntu1804  # образ для сборки
+image: Ubuntu2204  # образ для сборки
 
-stack: node 16  # окружение
+stack: node 20  # окружение
 
 branches:
   only:
     - master  # ветка git
 
-cache: node_modules  # кеширование
+cache: off  # кеширование
 
 install:
-  - npm install --force  # команда установки зависимостей
+  - npm install  # команда установки зависимостей
 
 build: off  # отключаем встроенную в appveyor систему сборки
 
